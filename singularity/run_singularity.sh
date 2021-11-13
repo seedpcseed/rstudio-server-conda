@@ -8,6 +8,7 @@ USER=$(whoami)
 PASSWORD=${PASSWORD:-notsafe}
 TMPDIR=${TMPDIR:-tmp}
 CONTAINER="rstudio_latest.sif"  # path to singularity container (will be automatically downloaded)
+CONDA_PREFIX="RSTUDIO_CONDA"
 
 # Set-up temporary paths
 RSTUDIO_TMP="${TMPDIR}/$(echo -n $CONDA_PREFIX | md5sum | awk '{print $1}')"
