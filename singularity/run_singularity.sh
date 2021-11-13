@@ -36,7 +36,7 @@ singularity exec \
 	--bind $RSTUDIO_TMP/local-share-rstudio:/home/rstudio/.local/share/rstudio \
 	--bind ${CONDA_PREFIX}:${CONDA_PREFIX} \
 	--bind $HOME/.config/rstudio:/home/rstudio/.config/rstudio \
-        `# add additional bind mount required for your use-case` \
+        --bind $PWD
 	--bind /data:/data \
 	--env CONDA_PREFIX=$CONDA_PREFIX \
 	--env RSTUDIO_WHICH_R=$R_BIN \
