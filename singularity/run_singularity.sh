@@ -45,5 +45,3 @@ singularity exec \
 	--env USER=$USER \
 	rstudio_latest.sif \
 	/init.sh
-
-
